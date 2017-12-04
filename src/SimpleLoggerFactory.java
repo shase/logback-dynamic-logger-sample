@@ -37,7 +37,6 @@ public class SimpleLoggerFactory {
 
 		Logger logger = (Logger) LoggerFactory.getLogger(loggerName);
 		logger.addAppender(fileAppender);
-		logger.setLevel(Level.INFO);
 		logger.setAdditive(false);
 
 		return logger;
