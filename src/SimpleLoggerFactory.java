@@ -26,13 +26,13 @@ public class SimpleLoggerFactory {
 		rollingPolicy.setFileNamePattern(path);
 		rollingPolicy.setMaxHistory(14);
 		rollingPolicy.setParent(fileAppender);
-		rollingPolicy.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
+		rollingPolicy.setContext(lc);
 		rollingPolicy.start();
 
 		fileAppender.setAppend(true);
 		fileAppender.setEncoder(ple);
 		fileAppender.setRollingPolicy(rollingPolicy);
-		fileAppender.setContext((LoggerContext) LoggerFactory.getILoggerFactory());
+		fileAppender.setContext(lc);
 		fileAppender.start();
 
 		Logger logger = (Logger) LoggerFactory.getLogger(loggerName);
