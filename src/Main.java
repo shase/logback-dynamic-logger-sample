@@ -10,7 +10,7 @@ public class Main {
 		Stream.of(path)
 			.forEach(p -> {
 				System.out.println(p);
-				Logger logger = new GeneralLoggerFactory().getLogger("sample", p);
+				Logger logger = new SimpleLoggerFactory().getLogger("sample", p);
 				logger.info("dynamic path");
 			});
 	}

@@ -10,7 +10,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 
-public class GeneralLoggerFactory {
+public class SimpleLoggerFactory {
 	public Logger getLogger(String loggerName, String path) {
 
 		LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
